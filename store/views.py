@@ -8,6 +8,10 @@ def all_products(request):
     return render(request  , 'store/home.html' , {'products' : product})
     print(product)
 
+def categories(request):
+    return {
+        "categories": Category.objects.all(),
+    }
 
 """
 def category_list(request, category_slug=None):
