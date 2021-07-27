@@ -3,6 +3,7 @@ from django import db
 from django.db import models
 from django.db.models.fields import DateField
 from django.contrib.auth.models import User 
+from django.urls import reverse
 # Create your models here.
 
 
@@ -42,6 +43,10 @@ class Product(models.Model):
         ordering = ['-created']
 
     def __str__(self) :
-        return self.title 
-    
+        return self.title
+
+        
+         
+    def get_absolute_url(self):
+            return reverse('store:product_detail', args=[self.slug])
 
