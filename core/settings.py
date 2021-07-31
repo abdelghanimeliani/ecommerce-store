@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+# add the store aplication to aour installed apps array
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +55,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
+
+#  add our template path 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
